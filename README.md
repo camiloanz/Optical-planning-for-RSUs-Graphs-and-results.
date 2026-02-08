@@ -15,7 +15,7 @@ For each experiment, the repository provides **Folium (HTML) visualizations** of
 
 ## Repository structure
 
-The repository is organized into **six top-level folders**, one per location:
+The repository is organized into **six top-level folders (zip files)**, one per location:
 
 - **Colombia/**
 - **Bogotá/**
@@ -39,6 +39,7 @@ Spain/
 100/
 results_Spain.xlsx
 
+Bogotá's folder has two parts because of its size.
 
 ### Per-experiment contents
 
@@ -64,7 +65,7 @@ Each location folder includes one Excel file (e.g., `results_Spain.xlsx`) contai
 
 ## Global aggregated results
 
-At the repository root, an Excel file aggregates **all experiments across the six locations**.Histograms and Spearman´s correlation analysis of savings are also included.
+At the repository root, an Excel file aggregates **all experiments across the six locations**.Histograms (Histograms.zip) and Spearman´s correlation analysis of savings (Correlations.zip) are also included.
 
 > Paper reference: **[ADD CITATION / DOI / LINK HERE]**
 
