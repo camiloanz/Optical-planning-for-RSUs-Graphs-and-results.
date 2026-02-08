@@ -30,45 +30,43 @@ These locations include **three countries** and, for each one, **a major city**,
 
 ## Per-location folder contents
 
-Inside each location folder, there are **100 subfolders** (one per experiment instance), e.g.:
+Inside each location folder, there are **100 subfolders** (one per experiment instance), and an Excel fil with numeric results e.g.:
 
 Spain/
-exp_001/
-exp_002/
+1/
+2/
 ...
-exp_100/
+100/
 results_Spain.xlsx
 
 
 ### Per-experiment contents
 
-Each `exp_XXX/` folder contains Folium-generated HTML files:
+Each subfolder contains Folium-generated HTML files:
 
-- `osm_raw.html` — raw graph downloaded from OpenStreetMap  
-- `graph_simplified.html` — simplified graph used as the optimization input  
+- `Raw_graph_place_test.html` — raw graph downloaded from OpenStreetMap  
+- `Simple_graph_place_test.html` — simplified graph used as the optimization input  
 - One HTML file per studied architecture/strategy, e.g.:
-  - `ptp.html`
-  - `bpon_heuristic.html`
-  - `upon_heuristic.html`
-  - `bpon_milp.html`
-  - `upon_milp.html`
+  - `PtP_place_test.html` = Point to Point
+  - `BPON_HEU_place_test.html` = BPON heuristic
+  - `UPON_HEU_place_test.html` = UPON heuristic
+  - `BPON_COST_place_test.html` = BPON MILP cost optimization
+  - `UPON_COST_place_test.html` = UPON MILP cost optimization
 
-(Exact filenames may vary slightly across folders.)
+Additionally, a .pkl (pickled NetworkX graph) file is provided for each input graph to support reproducibility.
+  - `Simple_graph_place_test.pkl`
 
 ### Per-location Excel summary
 
-Each location folder includes one Excel file (e.g., `results_Spain.xlsx`) containing the **aggregated results of the 100 experiments** in that location.
+Each location folder includes one Excel file (e.g., `results_Spain.xlsx`) containing the **aggregated results of the 100 experiments** in that location. It includes all input graph metrics, and results measurements in separated sheets (e.g., Cost, fiber, splitters, etc)
 
 ---
 
 ## Global aggregated results
 
-At the repository root, an Excel file aggregates **all experiments across the six locations**, including:
-- combined tables with all runs,
-- summary statistics,
-- plots used in the statistical analysis reported in the paper.
+At the repository root, an Excel file aggregates **all experiments across the six locations**.Histograms and Spearman´s correlation analysis of savings are also included.
 
-> Paper reference: **[ADD CITATION / DOI / ARXIV LINK HERE]**
+> Paper reference: **[ADD CITATION / DOI / LINK HERE]**
 
 ---
 
